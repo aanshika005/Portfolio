@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | Portfolio</title>
+    <title>Anshika | Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
@@ -14,25 +14,28 @@
 <body>
     <!-- Navigation -->
     <nav>
-        <div class="logo">Your Name</div>
+        <div class="logo">
+            <h1 class="logo-text">Software Engineer</h1>
+            <h1 class="logo-text">Data Analyst</h1>
+        </div>
         <ul class="nav-links">
-            <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
-            <li><a href="#work"><i class="fas fa-briefcase"></i> Work</a></li>
-            <li><a href="#achievements"><i class="fas fa-trophy"></i> Achievements</a></li>
-            <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+            <li><a href="#about"> About</a></li>
+            <li><a href="#work"> Work</a></li>
+            <li><a href="#achievements"> Achievements</a></li>
+            <li><a href="#contact"> Contact</a></li>
         </ul>
     </nav>     
 
    <!-- Hero Section -->
 <section id="hero">
     <div class="hero-content">
-        <h1>Hi, I'm <span>Your Name</span></h1>
+        <h1>Hi, I'm <span>Anshika</span></h1>
         <p>Passionate about creating exceptional digital experiences that blend creativity and technology.</p>
         <a href="#about" class="cta-button">Explore My Work</a>
     </div>
     <!-- Adding a graphic (e.g., an illustration) beside the text -->
     <div class="hero-graphic">
-        <img src="path-to-your-graphic.svg" alt="Creative Graphic" class="hero-img" />
+        <img src="Images\me.jpeg" alt="Creative Graphic" class="hero-img" />
     </div>
 </section>
 
@@ -41,7 +44,13 @@
     <section id="about" class="section">
         <div class="section-container">
             <h2 class="section-title">About Me</h2>
-            <p>I'm a passionate full-stack web developer with a love for innovative design. I specialize in creating seamless and engaging user experiences through clean, efficient code and creative solutions. With a deep understanding of both front-end and back-end technologies, I aim to deliver high-performance websites that enhance businesses and delight users.</p>
+            <p>Hey there! I’m a problem-solver, AI enthusiast, and full-stack developer who loves turning ideas into reality with code. Whether it's building AI models to predict genetic mutations, developing scalable databases, or automating quiz generation from podcasts, I’m all about creating efficient, and impactful solutions.
+
+                I thrive on challenges like debugging a stubborn bug, optimizing a machine learning model, or designing a seamless user experience gets me weirdly excited. I’ve presented my work at the ACM Mid-Southeast Conference, was selected for Google’s Women Engineers program, and even helped mentor aspiring developers as a Teaching Assistant.
+                
+                When I’m not coding, you’ll probably find me exploring new tech, geeking out over database optimizations, or sipping coffee while brainstorming my next big project. I love working with teams that push boundaries, and I’m always on the lookout for opportunities to build something game-changing.
+                
+                Let’s connect and create something awesome together!</p>
         </div>
     </section>
 
@@ -52,34 +61,61 @@
             <div class="work-grid">
                 <!-- Work Card 1 -->
                 <div class="work-card">
-                    <img src="https://via.placeholder.com/500x300" alt="Project 1">
+                    <img src="Images/Quiz.png" alt="Project 1">
                     <div class="work-overlay">
                         <h3>Project 1</h3>
-                        <p>A high-performance web app for e-commerce businesses.</p>
+                        <p>AI-Powered Quiz Generation System</p>
                         <a href="#" class="view-project">View Project</a>
                     </div>
                 </div>
                 <!-- Work Card 2 -->
                 <div class="work-card">
-                    <img src="https://via.placeholder.com/500x300" alt="Project 2">
+                    <img src="Images/gene.png" alt="Project 2">
                     <div class="work-overlay">
                         <h3>Project 2</h3>
-                        <p>Redesign of a creative agency's website.</p>
+                        <p>Variant Effect Predictor: AI for Genomic Research</p>
                         <a href="#" class="view-project">View Project</a>
                     </div>
                 </div>
                 <!-- Work Card 3 -->
                 <div class="work-card">
-                    <img src="https://via.placeholder.com/500x300" alt="Project 3">
+                    <img src="Images/earth.png" alt="Project 3">
                     <div class="work-overlay">
                         <h3>Project 3</h3>
-                        <p>A web app that improves productivity for teams.</p>
+                        <p>Air Quality Analysis with OpenAQ</p>
                         <a href="#" class="view-project">View Project</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <img src="Images/una.png" alt="Icon 1" />
+                </div>
+                <div class="timeline-content">
+                    <a href="https://www.una.edu"><h3>University of North Alabama</h3></a>
+                    <p>Bachelor's Degree in Computer Science</p>
+                    <span class="year">CGPA: 3.96/4</span>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <img src="" alt="Icon 2" />
+                </div>
+                <div class="timeline-content">
+                    <h3>High School Name</h3>
+                    <p>High School Diploma</p>
+                    <span class="year"></span>
+                </div>
+            </div>
+        </div>
+    </section>    
 
     <!-- Achievements Section -->
     <section id="achievements" class="section">
@@ -93,6 +129,15 @@
                         <p>Recognized for exceptional contributions to a major project with XYZ Company.</p>
                     </div>
                 </div>
+
+                <div class="timeline-item">
+                    <div class="year">2024</div>
+                    <div class="description">
+                        <h3>Developer of the Year</h3>
+                        <p>Recognized for exceptional contributions to a major project with XYZ Company.</p>
+                    </div>
+                </div>
+                
                 <div class="timeline-item">
                     <div class="year">2023</div>
                     <div class="description">
@@ -109,15 +154,15 @@
     <h2>Contact</h2>
     <p>Feel free to reach out to me through my social profiles or email below:</p>
     <div class="contact-links">
-        <a href="https://www.linkedin.com/in/your-profile" target="_blank" class="contact-link">
+        <a href="https://www.linkedin.com/in/anshikachoudhary005/" target="_blank" class="contact-link">
             <i class="fab fa-linkedin contact-icon"></i>
             LinkedIn
         </a>
-        <a href="https://github.com/your-username" target="_blank" class="contact-link">
+        <a href="https://github.com/aanshika005" target="_blank" class="contact-link">
             <i class="fab fa-github contact-icon"></i>
             GitHub
         </a>
-        <a href="mailto:your-email@example.com" class="contact-link">
+        <a href="mailto:anshikachoudry005@gmail.com" class="contact-link">
             <i class="fas fa-envelope contact-icon"></i>
             Email
         </a>
