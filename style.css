@@ -1,4 +1,3 @@
-/* General Styles */
 * {
     margin: 0;
     padding: 0;
@@ -31,18 +30,68 @@ nav {
     align-items: center;
 }
 
-nav .logo {
-    font-size: 1.8em;
-    font-weight: 600;
-    color: #FFD700;
+/* Logo Container */
+.logo {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+}
+
+/* Logo Text */
+.logo-text {
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    opacity: 0;
+    animation: fadeout 1s ease-in-out forwards;
+    animation-iteration-count: infinite;
+    white-space: nowrap;
+}
+
+/* Keyframes for fadeout effect */
+@keyframes fadeout {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Slide-In Animation */
+h1 {
+    animation: slidein 3s ease-out forwards;
+    font-size: 2.2em;
+    font-weight: 500;
+    color: white;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden;
+}
+
+h1:nth-child(1) {
+    animation-delay: 0s;
+}
+
+h1:nth-child(2) {
+    animation-delay: 3.5s; /* Delays the second text to animate after the first */
+}
+
+/* Keyframes for slidein effect */
+@keyframes slidein {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
 }
 
 nav .nav-links {
     display: flex;
     gap: 30px;
     justify-content: flex-end;
-    list-style: none; /* Remove default bullets */
-    padding-left: 0; /* Remove any default left padding */
+    list-style: none;
+    padding-left: 0;
 }
 
 nav .nav-links a {
@@ -61,7 +110,7 @@ nav .nav-links a:hover {
 
 nav .nav-icon {
     width: 20px;
-    height: 20px; /* Adjust the size of the icons */
+    height: 20px;
     margin-right: 10px;
 }
 
@@ -71,7 +120,6 @@ nav .nav-icon {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-image: url('path-to-your-background-image.jpg'); /* Add a background image */
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -115,7 +163,6 @@ nav .nav-icon {
     background-color: #f5a623;
 }
 
-/* Adding an illustration or graphic beside the text */
 .hero-graphic {
     max-width: 40%;
     animation: slideIn 1.5s ease-out forwards;
@@ -145,12 +192,12 @@ nav .nav-icon {
 section {
     padding: 80px 50px;
     text-align: center;
-    background-color: #111; /* Default dark background */
+    background-color: #111;
 }
 
 /* About Section */
 #about {
-    background-color: #111; /* Consistent background for About section */
+    background-color: #111;
 }
 
 #about h2 {
@@ -160,7 +207,7 @@ section {
 
 /* Work Section */
 #work {
-    background-color: #111; /* Consistent background for Work section */
+    background-color: #111;
 }
 
 #work h2 {
@@ -168,27 +215,6 @@ section {
     margin-bottom: 20px;
 }
 
-/* Achievements Section */
-#achievements {
-    background-color: #111; /* Consistent background for Achievements section */
-}
-
-#achievements h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-/* Contact Section */
-#contact {
-    background-color: #111; /* Consistent background for Contact section */
-}
-
-#contact h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-/* Work Section Grid */
 #work .work-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -245,29 +271,143 @@ section {
     font-size: 1.2em;
 }
 
+/* Education Section Timeline */
+#education h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#education .timeline {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    overflow-x: scroll;
+    padding: 50px 0;
+    background-color: #111; /* Set to the same as body background */
+    border-radius: 10px;
+}
+
+#education .timeline-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 30%;
+    justify-content: center;
+}
+
+#education .timeline-icon img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+#education .timeline-content {
+    background-color: #333; /* Consistent background */
+    padding: 25px;
+    width: auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    text-align: left;
+}
+
+#education .timeline-content h3 {
+    font-size: 2.5rem; /* Matching font size for headings */
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #FFD700;
+}
+
+#education .timeline-content p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+#education .timeline-content .year {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #FFD700;
+}
+
+#education .timeline::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #FFD700;
+    transform: translateY(-50%);
+    z-index: 0;
+}
+
 /* Achievements Section Timeline */
+#achievements h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
 #achievements .timeline {
     display: flex;
     flex-direction: column;
     gap: 40px;
     margin-top: 20px;
+    background-color: #111; /* Set to the same as body background */
+    border-radius: 15px;
+    padding: 40px 50px;
 }
 
-.timeline-item {
+#achievements .timeline-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #333; /* Consistent background */
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-.timeline-item .year {
+#achievements .timeline-item .year {
     font-size: 2.5em;
+    font-weight: 700;
+    color: #FFD700;
+    text-align: right;
+    width: 20%;
+}
+
+#achievements .timeline-item .description {
+    max-width: 75%;
+    font-size: 1.2em;
+    background-color: #444;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#achievements .timeline-item .description h4 {
+    font-size: 1.5em;
     font-weight: 600;
+    margin-bottom: 10px;
     color: #FFD700;
 }
 
-.timeline-item .description {
-    max-width: 800px;
-    font-size: 1.2em;
+#achievements .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 3px;
+    background-color: #FFD700;
+    z-index: -1;
+}
+
+#achievements .timeline-item:last-child {
+    margin-bottom: 40px;
 }
 
 /* Contact Section */
@@ -291,7 +431,7 @@ section {
 .contact-links {
     display: flex;
     justify-content: center;
-    gap: 30px; /* Space between links */
+    gap: 30px;
     margin-top: 20px;
 }
 
@@ -305,23 +445,22 @@ section {
 }
 
 .contact-link:hover {
-    color: #FFD700; /* Gold color on hover */
+    color: #FFD700;
 }
 
 .contact-icon {
     width: 30px;
     height: 30px;
-    margin-right: 10px; /* Space between icon and text */
+    margin-right: 10px;
     transition: transform 0.3s;
 }
 
 .contact-link:hover .contact-icon {
-    transform: scale(1.1); /* Slight zoom effect on hover */
+    transform: scale(1.1);
 }
 
-/* Email Icon */
 .fas.fa-envelope {
-    color: #FFD700; /* Gold color for the email icon */
+    color: #FFD700;
 }
 
 /* Footer */
